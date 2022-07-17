@@ -72,6 +72,10 @@ kubectl version: get version of kubernetes
 
 kubectl get nodes -o wide: show operating system
 
+kubectl get pods: get all pod of namespace
+
+kubectl run <Name> --image=<image>: create new pod with <Name> image
+
 ```
 
 
