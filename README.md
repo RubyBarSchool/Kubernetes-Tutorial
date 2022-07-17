@@ -48,3 +48,20 @@ four key in yaml:
  
  kubectl describe pod <name pod>: show describe of pod have <name>
 ```
+#### Simple Example yaml create pod of container database postgres
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres
+  labels:
+    tier: db-tier
+spec:
+  containers:
+    - name: postgres
+      image: postgres
+      env: 
+         - name: POSTGRES_PASSWORD
+           value: mysecretpassword
+```
+
