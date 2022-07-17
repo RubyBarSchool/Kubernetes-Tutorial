@@ -74,10 +74,19 @@ kubectl version: get version of kubernetes
 
 kubectl get nodes -o wide: show operating system
 
+kubectl get pods -o wide: show Node of pods
+
 kubectl get pods: get all pod of namespace
 
 kubectl run <Name> --image=<image>: create new pod with <Name> image
 
+kubectl describe TYPE NAME_PREFIX: show a detailed description of the selected resources
+
+kubectl delete TYPE NAME_PREFIX: delete of the selected resources
+
+kubectl run <Name> --image=<image> --dry-run=client -o yaml > <name file yaml>.yaml : create a mainfest file
+
+kubectl create -f <name>.yaml : create a resource from the mainfest file
 ```
 
 
