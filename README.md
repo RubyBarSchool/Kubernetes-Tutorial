@@ -31,6 +31,8 @@ cluster.
 * Kubelet is the agent that runs on each node in the cluster.
 * The agent is responsible for making sure that the containers are running on the nodes as expected.
 
+Cluster => Node => POD => container
+
 ## Kubernetes Concepts - PODs, ReplicaSets, Deployments
 ### Yaml In Kubernetes
 ```bash
