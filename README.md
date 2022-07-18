@@ -204,6 +204,14 @@ spec:
         resources: {}
 ```
 
+## Kubernetes service
+```bash
+
+kubectl get svc: get all service 
+
+minikube service <name service> --url: get url connection
+```
+
 
 
 ## Kubernetes command 
