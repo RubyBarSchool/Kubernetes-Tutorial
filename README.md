@@ -137,6 +137,8 @@ kubectl replace -f <file replicaSets>
 kubectl scale --replicas=<number> -f <file replicaSets>
 
 kubectl scale --replicas=6 replicaset <name replicaset>
+
+kubectl edit (RESOURCE/NAME | -f FILENAME) [options]: edit file config run base
 ```
 
 
