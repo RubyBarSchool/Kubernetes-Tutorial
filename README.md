@@ -109,10 +109,10 @@ spec:
            containers: 
              - name: nginx-container
                image: nginx
-replicas: 3
-selector:
-  matchLabels:
-    type: front-end
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
 ```
 
 #### Replication Controller and ReplicaSets
