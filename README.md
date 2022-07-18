@@ -78,6 +78,10 @@ kubectl get pods -o wide: show Node of pods
 
 kubectl get pods: get all pod of namespace
 
+kubectl get rc: get all replication controller
+
+kubectl get rs/replicaset: get all ReplicaSets
+
 kubectl run <Name> --image=<image>: create new pod with <Name> image
 
 kubectl describe TYPE NAME_PREFIX: show a detailed description of the selected resources
@@ -87,6 +91,8 @@ kubectl delete TYPE NAME_PREFIX: delete of the selected resources
 kubectl run <Name> --image=<image> --dry-run=client -o yaml > <name file yaml>.yaml : create a mainfest file
 
 kubectl create -f <name>.yaml : create a resource from the mainfest file
+
+
 ```
 
 #### Simple Example yaml create Replication Controllers and ReplicaSets of container nginx
@@ -114,6 +120,7 @@ spec:
     matchLabels:
       type: front-end
 ```
+In kubernetes 1.16 replicaset was moved to apps/v1 apiVersion
 
 #### Replication Controller and ReplicaSets
 ```bash
