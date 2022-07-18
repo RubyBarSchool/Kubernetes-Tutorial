@@ -89,6 +89,28 @@ kubectl run <Name> --image=<image> --dry-run=client -o yaml > <name file yaml>.y
 kubectl create -f <name>.yaml : create a resource from the mainfest file
 ```
 
+#### Simple Example yaml create ReplicaSets of container nginx
+```yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+     metadata:
+       name: myapp-pod
+       labels:
+          app: myapp
+          type: front-end
+       spec:
+           containers: 
+             - name: nginx-container
+               image: nginx
+   
+```
 
 
 ## Kubernetes command 
