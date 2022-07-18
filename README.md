@@ -89,7 +89,7 @@ kubectl run <Name> --image=<image> --dry-run=client -o yaml > <name file yaml>.y
 kubectl create -f <name>.yaml : create a resource from the mainfest file
 ```
 
-#### Simple Example yaml create ReplicaSets of container nginx
+#### Simple Example yaml create Replication Controllers and ReplicaSets of container nginx
 ```yaml
 apiVersion: v1
 kind: ReplicationController
@@ -109,7 +109,23 @@ spec:
            containers: 
              - name: nginx-container
                image: nginx
+replicas: 3
    
+```
+
+#### Replication Controller and ReplicaSets
+```bash
+kubectl create -f <file relicaSet yaml>: create replicaSet by file yaml
+
+kubectl get replicaset: get all replicaset sets createed
+
+kubectl delete replicaset <name replicaset>: delete replicaset
+
+kubectl replace -f <file replicaSets>
+
+kubectl scale --replicas=<number> -f <file replicaSets>
+
+kubectl scale --replicas=6 replicaset <name replicaset>
 ```
 
 
