@@ -141,6 +141,70 @@ kubectl scale --replicas=6 replicaset <name replicaset>
 kubectl edit (RESOURCE/NAME | -f FILENAME) [options]: edit file config run base
 ```
 
+## Kubernetes Deployments
+```bash
+kubectl create -f <file config deployment yaml>: create deployment
+
+kubectl get deployments: get all deployments
+
+kubectl get replicaset: get all replicasets
+
+kubectl get all: get all deployment, pod, replicaset
+
+kubectl rollout status deployment/<name deployment>:
+
+kubectl rollout history deployment/<name deployment>:
+
+kubectl apply -f <name file deployment yaml>: apply new edit of deployment
+
+kubectl set image deployment/<name deployment > <name image>=<name image and new version>
+
+kubectl rollout undo deployment/<name deployment>: undo update
+```
+
+### Simple deploy
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2022-07-18T11:26:50Z"
+  generation: 1
+  name: frontend
+  namespace: default
+  resourceVersion: "1383"
+  uid: 4209927c-074e-46c7-a7d8-fa3424f6a70e
+spec:
+  minReadySeconds: 20
+  progressDeadlineSeconds: 600
+  replicas: 4
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      name: webapp
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        name: webapp
+    spec:
+      containers:
+      - image: kodekloud/webapp-color:v1
+        imagePullPolicy: IfNotPresent
+        name: simple-webapp
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+```
+
+
 
 ## Kubernetes command 
 
