@@ -122,6 +122,8 @@ spec:
 ```
 In kubernetes 1.16 replicaset was moved to apps/v1 apiVersion
 
+In ReplicaSet, atribute in labels in metadata should the same atribute matchLabels in selector
+
 #### Replication Controller and ReplicaSets
 ```bash
 kubectl create -f <file relicaSet yaml>: create replicaSet by file yaml
