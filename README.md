@@ -228,7 +228,7 @@ spec:
     name: simple-webapp
 ```
 
-### Kubernetes on google cloud platform [DOC](https://cloud.google.com/kubernetes-engine/docs/)
+# Kubernetes on google cloud platform [DOC](https://cloud.google.com/kubernetes-engine/docs/)
 
 ## Kubernetes command 
 
