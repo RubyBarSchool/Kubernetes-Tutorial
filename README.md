@@ -1,6 +1,8 @@
 <img src="https://kubernetes.io/images/nav_logo.svg" alt="kubernetes" >
 
-# Kubernetes-Tutorial [Link Udemy](https://www.udemy.com/course/learn-kubernetes/) [Documentation](https://kubernetes.io/docs/home/)
+### Kubernetes-Tutorial 
+## [Website Kubernetes](https://kubernetes.io/docs/home/)
+## [Course Udemy](https://www.udemy.com/course/learn-kubernetes/)
  Kubernetes for the Absolute Beginners - Hands-on
 ## Kubernetes Overview
 ```cmd
